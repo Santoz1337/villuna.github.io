@@ -29,7 +29,11 @@ function clicked() {
         }
         alert("I'm outta here");
         alert("no more website for you");
-        clearTimeout(thanks_timeout);
+        
+        if (thanks_timeout) {
+            clearTimeout(thanks_timeout);
+        }
+
         document.getElementById("everything").remove();
         document.getElementById("body").style.backgroundColor = "#FFF";
     }
