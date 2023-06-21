@@ -1,3 +1,4 @@
+import init, { greet } from "./wasm_test.js";
 // people say global variables are evil! but this is vanilla js.
 // and i don't know how to write js
 var times_clicked = 0;
@@ -41,3 +42,8 @@ function clicked() {
 
 let button = document.getElementById("beans-no-suh");
 button.addEventListener("click", clicked);
+
+await init();
+
+let wasm_button = document.getElementById("wasm");
+wasm_button.addEventListener("click", () => { greet() });
