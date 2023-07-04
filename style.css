@@ -1,0 +1,44 @@
+body {
+    font-family: sans-serif;
+    background: linear-gradient(45deg, rgb(247,229,255) 0%, rgb(226,254,255) 100%);
+    height: 95vh;
+} 
+
+h1 {
+    font-style: italic;
+    font-family: "Helvetica Neue", sans-serif;
+    text-align: center;
+}
+
+div.footer {
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    color: grey;
+}
+
+div.footer > * {
+    display: inline-block;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+div.body {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1.2em;
+}
+
+button {
+    border: none;
+    padding: 5px;
+    font-weight: bold;
+}
+
+#dont-click {
+    background: none;
+    color: grey;
+}

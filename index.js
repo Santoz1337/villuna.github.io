@@ -4,6 +4,12 @@ var times_clicked = 0;
 var gained_trust = false;
 var thanks_timeout = null;
 
+function clearPage() {
+    let body = document.getElementsByTagName("BODY")[0];
+    body.replaceChildren();
+    body.style.background = "#FFF";
+}
+
 function clicked() {
     times_clicked++;
 
@@ -34,10 +40,9 @@ function clicked() {
             clearTimeout(thanks_timeout);
         }
 
-        document.getElementById("everything").remove();
-        document.getElementById("body").style.backgroundColor = "#FFF";
+        clearPage();
     }
 }
 
-let button = document.getElementById("beans-no-suh");
+let button = document.getElementById("dont-click");
 button.addEventListener("click", clicked);
