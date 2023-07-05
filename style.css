@@ -1,23 +1,40 @@
-html {
+body {
     font-family: sans-serif;
-    background: linear-gradient(45deg, rgb(247,229,255) 0%, rgb(226,254,255) 100%);
+    --gradient-colour-1: rgb(247, 229, 255);
+    --gradient-colour-2: rgb(226, 254, 255);
+    --hidden-text-colour: #eef0ff;
+    --bg-colour: linear-gradient(45deg, var(--gradient-colour-1) 0%, var(--gradient-colour-2) 100%);
+    --text-colour: black;
+    --muted-text-colour: grey;
+    background: var(--bg-colour);
+    color: var(--text-colour);
     height: 100vh;
+    margin: 0;
 } 
-
-h1 {
+body.dark-theme {
+    --gradient-colour-1: #2e0043;
+    --gradient-colour-2: #004244;
+    --text-colour: white;
+    --hidden-text-colour: #1a1c43;
+}
+div.everything {
+    padding: 30px;
+}
+h1, h2 {
     font-style: italic;
     font-family: "Helvetica Neue", sans-serif;
     text-align: center;
 }
 
+.hidden-text {
+    color: var(--hidden-text-colour);
+}
+
 div.footer {
-    position: absolute;
     text-align: center;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    color: grey;
+    color: var(--muted-text-colour);
+    margin: auto;
+    margin-top: 150px;
 }
 
 div.footer > * {
@@ -38,7 +55,8 @@ button {
     font-weight: bold;
 }
 
-#dont-click {
+.text-button {
     background: none;
-    color: grey;
+    color: var(--muted-text-colour);
+    cursor: pointer;
 }

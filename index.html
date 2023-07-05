@@ -5,40 +5,43 @@
         <title>villuna's page</title>
         <link rel="icon" type="image/x-icon" href="./favicon.ico">
         <link rel="stylesheet" href="style.css">
+        <meta name="color-scheme" content="light dark">
     </head>
 
     <body>
-        <div class="body">
-            <h1>luna's garden (actually it's a website)</h1>
-            <p style="font-weight: 700; text-align: left; color: rgba(247,229,255,1);">beans</p>
+        <div class="everything">
+            <button class="text-button" style="float: right;" id="theme-button">toggle theme</button>
+            <div class="body">
+                <h1 style="margin-top: 0;">luna's garden</h1> 
+                <h2 style="color: var(--muted-text-colour)">(actually it's a website)</h1>
+                <p class="hidden-text" style="font-weight: 700;">beans</p>
 
-            <br/>
+                <p>
+                    hello!
 
-            <p>
-                hello!
+                    i'm luna, and i'm interested in various things. i might post about them on this page.
+                </p>
 
-                i'm luna, and i'm interested in various things. i might post about them on this page.
-            </p>
+                <br/>
 
-            <br/>
+                <p>here are some links to things i've done.</p>
 
-            <p>here are some links to things i've done.</p>
+                <ul>
+                    <li><a href="tumblin.html">something cool i made</a></li>
+                    <li><a href="https://villi-refurinn.bandcamp.com/">my music</a></li>
+                </ul>
 
-            <ul>
-                <li><a href="tumblin.html">something cool i made</a></li>
-                <li><a href="https://villi-refurinn.bandcamp.com/">my music</a></li>
-            </ul>
+                <p>
+                    in classic html list format, no less! no, i'm not lazy. it's just my revolutionary new 
+                    Reactive™ Java™Script™ Frontend<span style="font-size: 0.6em; position: relative; bottom: 0.5em">unfortunately we couldn't trademark "frontend"</span> 
+                    Framework© called classic.js, you wouldn't understand
+                </p>
+            </div>
 
-            <p>
-                in classic html list format, no less! no, i'm not lazy. it's just my revolutionary new 
-                Reactive™ Java™Script™ Frontend<span style="font-size: 0.7em; position: relative; bottom: 0.5em">unfortunately we couldn't trademark "frontend"</span> 
-                Framework© called classic.js, you wouldn't understand
-            </p>
-        </div>
-
-        <div class="footer">
-            <p>If it's not obvious, this is a work in progress</p>
-            <button id="dont-click">don't click me</button>
+            <div class="footer">
+                <p>If it's not obvious, this is a work in progress</p>
+                <button id="dont-click" class="text-button">don't click me</button>
+            </div>
         </div>
 
         <script type="module" src="index.js"></script>

@@ -1,15 +1,27 @@
 // people say global variables are evil! but this is vanilla js.
 // and i don't know how to write js
-var times_clicked = 0;
-var gained_trust = false;
-var thanks_timeout = null;
+let times_clicked = 0;
+let gained_trust = false;
+let thanks_timeout = null;
+let light_theme = window.matchMedia("(prefers-color-scheme: light)").matches;
+updateTheme();
 
-function clearPage() {
-    let body = document.getElementsByTagName("BODY")[0];
-    body.replaceChildren();
-    body.style.background = "#FFF";
+// Update the theme (light or dark) based on settings
+function updateTheme() {
+    if (light_theme) {
+        document.body.className = "";
+    } else {
+        document.body.className = "dark-theme";
+    }
 }
 
+// Turns the page empty
+function clearPage() {
+    document.body.replaceChildren();
+    document.body.style.background = "white";
+}
+
+// funny
 function clicked() {
     times_clicked++;
 
@@ -44,5 +56,11 @@ function clicked() {
     }
 }
 
-let button = document.getElementById("dont-click");
-button.addEventListener("click", clicked);
+document.getElementById("dont-click")
+    .addEventListener("click", clicked);
+
+document.getElementById("theme-button")
+    .addEventListener("click", () => {
+        light_theme = !light_theme;
+        updateTheme();
+    });
