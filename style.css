@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
-    --gradient-colour-1: rgb(247, 229, 255);
-    --gradient-colour-2: rgb(226, 254, 255);
+    --gradient-colour-1: rgb(244, 217, 255);
+    --gradient-colour-2: rgb(210, 253, 255);
     --hidden-text-colour: #eef0ff;
     --bg-colour: linear-gradient(45deg, var(--gradient-colour-1) 0%, var(--gradient-colour-2) 100%);
     --text-colour: black;
