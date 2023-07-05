@@ -3,6 +3,7 @@
 let times_clicked = 0;
 let gained_trust = false;
 let thanks_timeout = null;
+let theme_button = document.getElementById("theme-button");
 let light_theme = window.matchMedia("(prefers-color-scheme: light)").matches;
 updateTheme();
 
@@ -13,6 +14,8 @@ function updateTheme() {
     } else {
         document.body.className = "dark-theme";
     }
+    
+    theme_button.textContent = `switch to ${light_theme ? "dark" : "light"} theme`;
 }
 
 // Turns the page empty
